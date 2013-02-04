@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 
-get '/events' do  erb :event
+get '/' do
+  erb :index
 end
