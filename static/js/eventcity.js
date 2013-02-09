@@ -3,10 +3,10 @@ var EventCity = {
     marker: null,
 
     getPosition: function() {
-        if(!navigator.geoLocation) {
-            EventCity.noGeoSupport();
-            return;
-        }
+        // if(!navigator.geoLocation) {
+        //     EventCity.noGeoSupport();
+        //     return;
+        // }
 
         console.log(navigator);
 
@@ -20,6 +20,7 @@ var EventCity = {
             console.log(point);
             EventCity.initMap();
             EventCity.addMarker(point);
+            EventCity.onLocationFound();
 
             // var reverseUrl = "/events/" + position.coords.latitude + "/" + position.coords.longitude;
             // $.get(reverseUrl, function(response) {
