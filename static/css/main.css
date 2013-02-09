@@ -54,6 +54,14 @@ html, body, #map {
             box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
 }
 
+footer {
+      width: 680px;
+      margin-top: 350px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+}
+
 @media only screen and (max-width: 480px) {
   /* Mobile styles go here */
   body{ width:100%;}
@@ -78,5 +86,9 @@ html, body, #map {
       top: 2px;
       width: 480px;
       height: 300px;
+  }
+
+  footer {
+    width: 480px;
   }
 }
