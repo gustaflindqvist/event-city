@@ -15,20 +15,12 @@ html, body, #map {
 }
 
 .map-container {
-    width: 184px;
-    height: 184px;
+    width: 680px;
+    height: 300px;
     float: left;
     position: relative;
 }
-.map-container .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 184px;
-    height: 184px;
-    background: url(../img/map-overlay.png);
-    z-index: 10;
-}
+
 .map-container .fail {
     display: none;
     position: absolute;
