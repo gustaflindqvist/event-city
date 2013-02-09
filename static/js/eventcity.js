@@ -3,6 +3,8 @@ var EventCity = {
     marker: null,
 
     getPosition: function() {
+        console.log(navigator);
+
         if(!navigator.geoLocation) {
             EventCity.noGeoSupport();
             return;
@@ -14,12 +16,18 @@ var EventCity = {
 
         var watchPositionId = navigator.geolocation.watchPosition(function(position) {
             console.log("position:", position);
-            var reverseUrl = "/lookup/" + position.coords.latitude + "/" + position.coords.longitude;
-            $.get(reverseUrl, function(response) {
-                console.log("response:", response);
-            }).fail(function() {
-                EventCity.failMessage("Fail")
-            });
+
+            // var reverseUrl = "/events/" + position.coords.latitude + "/" + position.coords.longitude;
+            // $.get(reverseUrl, function(response) {
+            //     console.log("response:", response);
+
+            //     EventCity.initMap();
+            // }).fail(function() {
+            //     EventCity.failMessage("Fail")
+            // });
+            var point = [position.coords.latitude, position.coords.longitude];
+            EventCity.initMap();
+            EventCity.addMarker(point);
         }, function() {
             EventCity.failMessage("You have to allow the website to know your location");
         });

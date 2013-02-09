@@ -9,4 +9,8 @@ class EventCity < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  get '/events' do
+    # Stub events connected to position
+  end
 end
