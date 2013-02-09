@@ -19,6 +19,7 @@ var EventCity = {
             var point = [position.coords.latitude, position.coords.longitude];
             console.log(point);
             EventCity.initMap();
+            EventCity.map.setView(point, 15);
             EventCity.addMarker(point);
 
             // var reverseUrl = "/events/" + position.coords.latitude + "/" + position.coords.longitude;
@@ -50,7 +51,7 @@ var EventCity = {
             var map = L.map('map', {zoomControl:true});
             L.tileLayer('http://{s}.tile.cloudmade.com/33f1c74149b04476931958e293559044/997/256/{z}/{x}/{y}.png', {attribution: ''}).addTo(map);
             map.attributionControl.setPrefix('');
-            map.locate({setView: true, maxZoom: 16});
+            //map.locate({setView: true, maxZoom: 16});
             this.map = map;
         }
         return this.map;
