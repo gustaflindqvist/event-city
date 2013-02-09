@@ -1,12 +1,9 @@
 #!/usr/bin/env ruby
 require 'rubygems'
+require 'bundler'
 
-APP_ROOT = File.expand_path(File.dirname(__FILE__))
+Bundler.require
 
-require "#{APP_ROOT}/vendor/gems/environment"
+require './app'
 
-$: << "#{APP_ROOT}/lib/"
-
-#require 'event-city'
-
-#EventCity::App.run!
+run EventCity
