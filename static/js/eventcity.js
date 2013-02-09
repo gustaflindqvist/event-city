@@ -47,10 +47,10 @@ var EventCity = {
         $("map").show();
 
         if (!this.map) {
-            var map = L.map('map', {zoomControl:false});
+            var map = L.map('map', {zoomControl:true});
             L.tileLayer('http://{s}.tile.cloudmade.com/33f1c74149b04476931958e293559044/997/256/{z}/{x}/{y}.png', {attribution: ''}).addTo(map);
             map.attributionControl.setPrefix('');
-            //map.locate({setView: true, maxZoom: 16});
+            map.locate({setView: true, maxZoom: 16});
             this.map = map;
         }
         return this.map;
