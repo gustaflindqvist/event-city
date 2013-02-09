@@ -51,7 +51,6 @@ var EventCity = {
             L.tileLayer('http://{s}.tile.cloudmade.com/33f1c74149b04476931958e293559044/997/256/{z}/{x}/{y}.png', {attribution: ''}).addTo(map);
             map.attributionControl.setPrefix('');
             //map.locate({setView: true, maxZoom: 16});
-            map.on('locationfound', onLocationFound);
             this.map = map;
         }
         return this.map;
