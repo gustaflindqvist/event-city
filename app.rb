@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'rgeo/geo_json'
 
 class EventCity < Sinatra::Base
   set :static, true

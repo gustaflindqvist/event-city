@@ -6,6 +6,9 @@ GEM
     rack (1.5.2)
     rack-protection (1.3.2)
       rack
+    rgeo (0.3.20)
+    rgeo-geojson (0.2.3)
+      rgeo (>= 0.3.7)
     sinatra (1.3.4)
       rack (~> 1.4)
       rack-protection (~> 1.3)
@@ -20,5 +23,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  rgeo-geojson
   sinatra
   thin
