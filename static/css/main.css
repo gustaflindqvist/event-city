@@ -28,14 +28,14 @@ html, body, #map {
     top: 67px;
     width: 62px;
     height: 49px;
-    background: url(../img/fail.png);
+    /*background: url(../img/fail.png);*/
     z-index: 1;
 }
 .map-container .loader {
     display: none;
     width: 80px;
     height: 80px;
-    background: url(../img/loader.gif);
+    /*background: url(../img/loader.gif);*/
     position: absolute;
     left: 52px;
     top: 52px;
@@ -49,9 +49,8 @@ html, body, #map {
     width: 680px;
     height: 300px;
     z-index: 9;
-
-  margin: 40px;
-  -webkit-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
-     -moz-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
-          box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
+    margin: 40px;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
+       -moz-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
+            box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
 }
