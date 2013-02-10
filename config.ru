@@ -2,8 +2,14 @@
 require 'rubygems'
 require 'bundler'
 
-Bundler.require
+Bundler.require(:default)
 
 require './app'
 
-run EventCity
+use Rack::ShowExceptions
+
+map '/' do
+  run Margin::EventCity
+end
+
+$stdout.sync = true
