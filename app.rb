@@ -44,14 +44,15 @@ module Margin
 
       content_type :json
 
-      parsed["venues"].each do |s|
-        @lat = s["geo"]["latitude"]
-        @lng = s["geo"]["longitude"]
-      end
+      @events = []
 
-      { :location =>
-        { :lng => @lng, :lat => @lat}
-      }.to_json
+      parsed["venues"].each do |s|
+        lat = s["geo"]["latitude"]
+        lng = s["geo"]["longitude"]
+
+        @events << { :location => {:lat => lat, :lng => lng }}
+      end
+      @events = @events.to_json
     end
   end
 end

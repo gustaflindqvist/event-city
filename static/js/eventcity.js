@@ -23,11 +23,13 @@ var EventCity = {
 
             $.get(reverseUrl, function(response) {
                 console.log("response:", response);
-                console.log(response);
                 if (response) {
-                    var eventpoint = [response.location.lat, response.location.lng];
-                    console.log(eventpoint);
-                    EventCity.addMarker(eventpoint);
+                    $.each(response, function(i, event){
+                        var eventpoint = [event.location.lat, event.location.lng];
+
+                        console.log(eventpoint);
+                        EventCity.addMarker(eventpoint);
+                    });
                 } else {
                     EventCity.failMessage("Error! Couldn't add events to the map");
                 }
