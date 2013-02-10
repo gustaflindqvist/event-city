@@ -1,0 +1,73 @@
+{
+  "count": 512,
+  "created": "2011-09-26T10:00:00.2250984+00:00",
+  "events": [
+ {
+   "id": "0123456789abcdef",
+   "name": "Spinal Tap Reunion",
+   "start": "2010-07-13T17:00:00+02:00",
+   "end": "2010-07-14T01:00:00+02:00",
+   "doorsOpen": "2010-07-13T17:00:00+02:00",
+   "infoUri": "http://www.tickster.com/sv/events/0123456789abcdef",
+   "shopUri": "https://secure.tickster.com/Intro.aspx?ERC=0123456789ABCDEF",
+   "description": "<p>They're back! The most anticipated reunion of the century!</p>",
+   "performers": [
+    "Spinal Tap"
+   ],
+   "links": [
+    {
+    "text": "Spinal Tap on Wikipedia",
+    "uri": "http://en.wikipedia.org/wiki/This_Is_Spinal_Tap"
+    }
+   ],
+   "goods": [
+    {
+    "name": "Spinal Tap VIP-ticket",
+    "type": "ticket",
+    "description": "Get the complete backstage experience",
+    "price": {
+    "includingVat": 1195,
+    "vatPercentage": 0.06
+    }
+    },
+    {
+    "name": "Spinal Tap",
+    "type": "ticket",
+    "description": "",
+    "price": {
+    "includingVat": 595,
+    "vatPercentage": 0.06
+    }
+    }
+   ],
+   "tags": [
+    "rock",
+    "reunion",
+    "humor"
+   ]
+ }
+  ],
+  "venues": [
+               {
+               "id": "abcdef0123456789",
+               "name": "Club Rock",
+               "address": "C/O Club Jazz\nBackstagestreet 2",
+               "zipCode": "123 45",
+               "city": "Stockholm",
+               "country": "SE",
+               "geo": {
+                 "latitude": 59.65448,
+                 "longitude": 12.59174
+               },
+               "infoUri": "http://www.tickster.com/sv/events/at/abcdef0123456789"
+               }
+            ],
+  "organizers": [
+           {
+             "organizer": {
+               "id": "01234abcdef56789",
+               "name": "Fantasy Organizers Inc",
+               "infoUri": "http://www.tickster.com/sv/events/by/01234abcdef56789"
+             }
+           }]
+}
