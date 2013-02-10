@@ -3,12 +3,10 @@ var EventCity = {
     marker: null,
 
     getPosition: function() {
-        // if(!navigator.geoLocation) {
-        //     EventCity.noGeoSupport();
-        //     return;
-        // }
-
-        console.log(navigator);
+        if(navigator.geoLocation == false) {
+            EventCity.noGeoSupport();
+            return;
+        }
 
         var loader = $(".map-container .loader");
         loader.show();
@@ -17,19 +15,25 @@ var EventCity = {
         var watchPositionId = navigator.geolocation.watchPosition(function(position) {
             console.log("position:", position);
             var point = [position.coords.latitude, position.coords.longitude];
-            console.log(point);
             EventCity.initMap();
             EventCity.map.setView(point, 15);
             EventCity.addMarker(point);
 
-            // var reverseUrl = "/events/" + position.coords.latitude + "/" + position.coords.longitude;
-            // $.get(reverseUrl, function(response) {
-            //     console.log("response:", response);
+            var reverseUrl = "/location/" + position.coords.latitude + "/" + position.coords.longitude;
 
-            //     EventCity.initMap();
-            // }).fail(function() {
-            //     EventCity.failMessage("Fail")
-            // });
+            $.get(reverseUrl, function(response) {
+                console.log("response:", response);
+                console.log(response);
+                if (response) {
+                    var eventpoint = [response.location.lat, response.location.lng];
+                    console.log(eventpoint);
+                    EventCity.addMarker(eventpoint);
+                } else {
+                    EventCity.failMessage("Error! Couldn't add events to the map");
+                }
+            }).fail(function() {
+                EventCity.failMessage("Fail!!");
+            });
         }, function() {
             EventCity.failMessage("You have to allow the website to know your location");
         });
@@ -58,8 +62,6 @@ var EventCity = {
     },
 
     addMarker: function(point) {
-        if (this.marker)
-            this.map.removeLayer(this.marker);
         this.marker = L.marker(point).addTo(this.map);
     },
 
