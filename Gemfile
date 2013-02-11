@@ -5,3 +5,5 @@ gem 'thin'
 #gem 'rgeo-geojson'
 gem 'geocoder'
 gem 'json'
+
+gem 'rmeetup'

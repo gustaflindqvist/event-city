@@ -1,0 +1,10 @@
+development:
+  meetup_api_key:
+  meetup_api_secret:
+  tickester_api_key:
+  tickester_api_secret:
+production:
+  meetup_api_key:
+  meetup_api_secret:
+  tickester_api_key:
+  tickester_api_secret:
