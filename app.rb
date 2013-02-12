@@ -1,19 +1,17 @@
 require 'rubygems'
 require 'sinatra'
 require 'geocoder'
+require 'sinatra/config_file'
 
 module Margin
   class EventCity < Sinatra::Base
+    register Sinatra::ConfigFile
+
+    config_file 'config.yml'
+
     set :static, true
     set :root, File.dirname(__FILE__)
     set :public_folder, Proc.new { File.join(root, "static") }
-
-    configure do
-        yaml = YAML.load_file(settings.config + "/config.yaml")[settings.environment.to_s]
-        yaml.each_pair do |key, value|
-          set(key.to_sym, value)
-        end
-    end
 
     get '/' do
       erb :index
